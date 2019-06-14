@@ -14,7 +14,10 @@
 
 .build-team-list li {
 	text-align: -webkit-match-parent;
-	font-size: 2px;
+	/* font-size: 2px; */
+	letter-spacing: 1px;
+    font-size: 14px;
+
 }
 
 /*.build-team-list .pokemon-row a {
@@ -33,7 +36,7 @@
 
 .pokemon-list span {
 	display: inline-block;
-	font-size: 2px;
+	font-size: 12px;
 	text-align: center;
 }
 

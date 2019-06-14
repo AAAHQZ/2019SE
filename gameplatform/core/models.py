@@ -11,7 +11,7 @@ class GameUser(models.Model):
     userPassword = models.CharField(max_length=100)
     userStatus = models.CharField(max_length=10)
     def __str__(self):
-        return self.userName
+        return self.userID
 
 class Item(models.Model):
     """
