@@ -22,4 +22,8 @@ urlpatterns = [
     path('index/',views.index),
     path('logIn/',views.logIn),
     path('signUp/',views.signUp),
+    path('getMonsterData/',views.getMonsterData),
+    path('getSkillData/',views.getSkillData),
+    path('getItemData/',views.getItemData),
+    path('getUserTeam/',views.getUserTeam),
 ]
