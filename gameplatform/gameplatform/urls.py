@@ -21,9 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',prepareViews.index),
     path('logIn/',prepareViews.logIn),
-<<<<<<< HEAD
     path('signUp/',prepareViews.signUp),
 ]
-=======
-    ]
->>>>>>> a64b58efd2224320ca2e015e23f842682e831093

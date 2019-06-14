@@ -1,10 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-<<<<<<< HEAD
 from .models import GameUser
 import hashlib
-=======
->>>>>>> a64b58efd2224320ca2e015e23f842682e831093
 # from django.views.decorators.csrf import csrf_exempt
 
 import json
@@ -15,8 +12,7 @@ def index(request):
 	
 def logIn(request):
 	if request.method == "GET":
-<<<<<<< HEAD
-		retstatus = 0
+		retstatus = 2
 		userID=request.GET.get('userID')
 		userPassword=request.GET.get('userPassword')
 		try:
@@ -30,6 +26,8 @@ def logIn(request):
 			result = md5.hexdigest()
 			if result == GUPW.userPassword:
 				retstatus = 1
+			else:
+				retstatus = 3
 		ret = {"signUpStatus":retstatus}
 		return HttpResponse(json.dumps(ret))
 
@@ -50,7 +48,3 @@ def signUp(request):
 			newGU.save()
 		ret = {"signUpStatus":retstatus}
 	return HttpResponse(json.dumps(ret))
-=======
-		ret = {"logInStatus":1}
-		return HttpResponse(json.dumps(ret))
->>>>>>> a64b58efd2224320ca2e015e23f842682e831093
