@@ -12,7 +12,7 @@ def index(request):
 	
 def logIn(request):
 	if request.method == "GET":
-		retstatus = 2
+		retstatus = 0
 		userID=request.GET.get('userID')
 		userPassword=request.GET.get('userPassword')
 		try:
@@ -26,8 +26,6 @@ def logIn(request):
 			result = md5.hexdigest()
 			if result == GUPW.userPassword:
 				retstatus = 1
-			else:
-				retstatus = 3
 		ret = {"signUpStatus":retstatus}
 		return HttpResponse(json.dumps(ret))
 
