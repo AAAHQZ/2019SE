@@ -98,3 +98,4 @@ def getUserTeam(request):
     return HttpResponse(json.dumps(ret))        
 
 # def returnUserTeam(request):
+

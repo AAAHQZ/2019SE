@@ -24,7 +24,8 @@ function initLogin() {
 				type:"GET",
 				data:{
 					'userID': username,
-					'userPassword': password
+					'userPassword': password,
+					'usertest': {'test1': "123", 'test2': [1,2,3,4]}
 				},
 				success:function(ret) {
 					var returnData = JSON.parse(ret);
