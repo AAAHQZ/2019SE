@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.forms.models import model_to_dict
-from .models import GameUser,Race,Skill,Item
+from .models import GameUser,Race,Skill,Item，Team
 import hashlib
 # from django.views.decorators.csrf import csrf_exempt
 
@@ -81,3 +81,20 @@ def getItemData(request):
 		ret = {'skillList':ItemList}
 	return HttpResponse(json.dumps(ret))
     
+def getUserTeam(request):
+    if request.method == "GET":
+        teamList = []
+        userID = request.GET.get('userID')
+        try:
+            teamOwner = GameUser.objects.get(userID=userID)
+        except:
+            ret = {'teamList':teamList}
+            return HttpResponse(json.dumps(ret))
+        teams = Team.objects.fliter(teamOwner=teamOwner)
+        for team in teams:
+            teamdict = model_to_dict(team)
+            teamList.append(teamdict)
+        ret = {'teamList':teamList}
+    return HttpResponse(json.dumps(ret))        
+
+# def returnUserTeam(request):
