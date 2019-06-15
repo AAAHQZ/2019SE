@@ -9,6 +9,9 @@ import json
 
 def index(request):
 	return render(request,'index.html')
+
+def battle(request):
+	return render(request,'battle.html')
 	
 def logIn(request):
 	if request.method == "GET":

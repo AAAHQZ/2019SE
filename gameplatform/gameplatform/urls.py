@@ -26,4 +26,5 @@ urlpatterns = [
     path('getSkillData/',views.getSkillData),
     path('getItemData/',views.getItemData),
     path('getUserTeam/',views.getUserTeam),
+    path('index/',views.battle),
 ]

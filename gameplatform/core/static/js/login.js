@@ -3,7 +3,8 @@ var Login_Button = '[data-button="login"]';
 var Signup_Button = '[data-button="signup"]';
 var Username_Input = '[data-input="username"]';
 var Password_Input = '[data-input="password"]';
-var Input_Warning = '[data-warning="inputWarning"]'
+var Input_Warning = '[data-warning="inputWarning"]';
+var Login_Name = '[data-target="#myModal2"]';
 
 var loginButton = document.querySelector(Login_Button);
 var signupButton = document.querySelector(Signup_Button);
@@ -32,6 +33,8 @@ function initLogin() {
 					if (logInStatus == 1) {
 						inputWarning.innerText = "登陆成功!";
 						console.log('登陆成功!');
+						var loginName = document.querySelector(Login_Name);
+						loginName.innerText = username;
 					} else if (logInStatus == 2) {
 						inputWarning.innerText = "昵称不存在!";
 						console.log('昵称不存在!');

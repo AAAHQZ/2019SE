@@ -1,9 +1,9 @@
 .pokemon-row {
 	height: 32px;
-	padding: 1px 0 0;
+	/*padding: 1px 0 0;*/
 }
 
-.pokemon-list, .pokemon-list li {
+/*.pokemon-list, .pokemon-list li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -14,30 +14,47 @@
 
 .build-team-list li {
 	text-align: -webkit-match-parent;
-	/* font-size: 2px; */
+	 font-size: 2px; 
 	letter-spacing: 1px;
     font-size: 14px;
 
 }
-
+*/
 /*.build-team-list .pokemon-row a {
 	border-radius: 4px;
 	cursor: pointer;
 }*/
 
-.pokemon-list li>a {
+/*.pokemon-list li>a {
 	display: block;
 	height: 30px;
 	padding:0 0 0 4px;
-	border: 1px solid transparent;
+	border: 2px solid transparent;
 	margin: 0 5px 1px;
 	text-decoration: none;
+}*/
+/*.title {
+	font-size: 0px;
+}
+
+.pokemon-list {
+	font-size: 0px;
+}
+*/
+.title span {
+	display: inline-block;
+	text-align: center;
+	letter-spacing:normal;
+	word-spacing:normal;
 }
 
 .pokemon-list span {
 	display: inline-block;
+	/*letter-spacing: 3px;*/
 	font-size: 12px;
 	text-align: center;
+	letter-spacing:normal;
+	word-spacing:normal;
 }
 
 .pokemon-row img {
@@ -46,7 +63,7 @@
 }
 
 .pokemon-name-image {
-	width: 140px;
+	width: 154px;
 	display: inline-flex;
 }
 
@@ -59,21 +76,30 @@
 }
 
 .pokemon-type {
-	width: 30px;
+	width: 32px;
 }
 .pokemon-ability {
-	width: 40px;
+	width: 42px;
 }
 
 .title-ability {
 	width: 40px;
 }
 
-.pokemon-attribute-value {
+.title-attribute-value {
 	width: 300px;
 }
 
-.pokemon-attribute-value span {
+.pokemon-attribute-value {
+	width: 312px;
+}
+
+.title-attribute-value span {
 	width: 40px;
+}
+
+.pokemon-attribute-value span {
+	width: 44px;
+	text-align: center;
 }
 

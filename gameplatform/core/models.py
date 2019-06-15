@@ -30,6 +30,7 @@ class Race(models.Model):
     objects = models.Manager() 
     raceName = models.CharField(max_length=100)
     racePhoto = models.CharField(max_length=100)
+    raceType = models.CharField(max_length=100,default='电')
     raceHp = models.IntegerField()
     raceAtk = models.IntegerField()
     raceDef = models.IntegerField()
@@ -44,6 +45,7 @@ class Skill(models.Model):
     """
     objects = models.Manager() 
     skillType = models.CharField(max_length=100)
+    skillClass = models.CharField(max_length=100,default='物理')
     skillPhoto = models.CharField(max_length=100)
     skillPower = models.IntegerField()
 
